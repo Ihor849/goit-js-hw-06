@@ -14,13 +14,13 @@ const onBoxesCollection = document.querySelector("#boxes");
 // console.log(boxesCollection);
 
 // ==========================================================
-// const refs = {
-//   controlsCollection: document.querySelector("#controls"),
-//   inputUser: controlsCollection.firstElementChild,
-//   buttonCreate: controlsCollection.querySelector("button"),
-//   buttonDestroy: controlsCollection.lastElementChild,
-//   boxesCollection: document.querySelector("#boxes"),
-// };
+const refs = {
+  controlsCollection: document.querySelector("#controls"),
+  onInputUser: controlsCollection.firstElementChild,
+  onButtonCreate: controlsCollection.querySelector("button"),
+  onButtonDestroy: controlsCollection.lastElementChild,
+  onBoxesCollection: document.querySelector("#boxes"),
+};
 
 // +++++++++++++++++++ С О З Д А Н И Е    Ц В А Т А  ++++++++++++++++++++++
 function getRandomHexColor() {
@@ -30,7 +30,7 @@ function getRandomHexColor() {
 }
 
 // +++++++++++++++++++ С О З Д А Н И Е    Б Л О К О В  ++++++++++++++++++++++
-onInputUser.addEventListener("input", createBoxes);
+refs.onInputUser.addEventListener("input", createBoxes);
 
 function createBoxes(amount) {
   const arrayObjects = [];
@@ -56,11 +56,6 @@ onButtonCreate.addEventListener("click", () => {
 onButtonDestroy.addEventListener("click", destroyBoxes);
 
 function destroyBoxes() {
-  onBoxesCollection.remove();
-  // onBoxesCollection.value = " ";
-  // onInputUser.valueAsNumber = " ";
-  // console.dir(onInputUser.valueAsNumber);
-  // onInputUser.value = "";
-  // onInputUser.getInput("number");
-  window.location.reload();
+  onBoxesCollection.innerHTML = "";
+  onInputUser.value = "";
 }
