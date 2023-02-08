@@ -25,10 +25,15 @@ button {
 
 .gallery {
   display: flex;
+  flex-direction: column;
   gap:25px;
-
-}
-.gallery__pic{
-  display: flex;
   
+}
+.gallery__pic {
+  display: flex;
+  justify-content: center;
+  
+}
+.pic{
+  width: 200vh
 }
