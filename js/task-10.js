@@ -1,11 +1,7 @@
 const controlsCollection = document.querySelector("#controls");
-
 const onInputUser = controlsCollection.firstElementChild;
-
 const onButtonCreate = controlsCollection.querySelector("button");
-
 const onButtonDestroy = controlsCollection.lastElementChild;
-
 const onBoxesCollection = document.querySelector("#boxes");
 
 // ==========================================================
