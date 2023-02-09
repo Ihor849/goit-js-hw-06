@@ -1,8 +1,6 @@
 const fieldInput = document.querySelector("#name-input");
-console.log(fieldInput);
 
 const textOutput = document.querySelector("#name-output");
-console.log(textOutput);
 
 fieldInput.addEventListener("input", onInputChange);
 

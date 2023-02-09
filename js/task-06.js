@@ -1,5 +1,4 @@
 const fieldInput = document.querySelector("#validation-input");
-console.log(fieldInput);
 
 fieldInput.addEventListener("blur", onInputBlur);
 
@@ -11,10 +10,7 @@ const refs = {
 };
 
 function onInputBlur(event) {
-  console.log("Input потерял фокус - событие blur");
-
   if (Number(refs.length) === event.currentTarget.value.length) {
-    console.log(event.currentTarget.value.length);
     fieldInput.classList = "valid";
   } else {
     fieldInput.classList = "invalid";

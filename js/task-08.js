@@ -2,7 +2,6 @@ const form = document.querySelector(".login-form");
 const buttonSubmit = form.querySelector(".login-form button");
 
 form.addEventListener("submit", onFormSubmit);
-console.log(form);
 
 function onFormSubmit(event) {
   event.preventDefault();
@@ -16,7 +15,6 @@ function onFormSubmit(event) {
       email: elementsForm.elements.email.value,
       password: elementsForm.elements.password.value,
     };
-    console.log(formData);
 
     onResetFormData();
   }

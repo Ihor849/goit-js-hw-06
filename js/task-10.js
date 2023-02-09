@@ -1,17 +1,12 @@
 const controlsCollection = document.querySelector("#controls");
-// console.log(controlsCollection);
 
 const onInputUser = controlsCollection.firstElementChild;
-// console.dir(onInputUser);
 
 const onButtonCreate = controlsCollection.querySelector("button");
-// console.log(buttonCreate);
 
 const onButtonDestroy = controlsCollection.lastElementChild;
-// console.log(buttonDestroy);
 
 const onBoxesCollection = document.querySelector("#boxes");
-// console.log(boxesCollection);
 
 // ==========================================================
 const refs = {
@@ -25,7 +20,6 @@ const refs = {
 // +++++++++++++++++++ С О З Д А Н И Е    Ц В А Т А  ++++++++++++++++++++++
 function getRandomHexColor() {
   const boxesColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-  console.log(boxesColor);
   return boxesColor;
 }
 
@@ -36,13 +30,11 @@ function createBoxes(amount) {
   const arrayObjects = [];
 
   for (let i = 0; i < amount; i += 1) {
-    // console.log(i);
     const divEl = document.createElement("div");
     divEl.style.width = `${30 + 10 * i}px`;
     divEl.style.height = `${30 + 10 * i}px`;
     divEl.style.backgroundColor = getRandomHexColor();
     arrayObjects.push(divEl);
-    // console.log(arrayObjects);
   }
   return arrayObjects;
 }
